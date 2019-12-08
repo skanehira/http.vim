@@ -2,6 +2,7 @@ package main
 
 import (
 	"fmt"
+	"log"
 	"net/http"
 	"net/http/httputil"
 )
@@ -13,5 +14,5 @@ func main() {
 		fmt.Fprintln(w, "Hello Gorilla")
 	})
 
-	http.ListenAndServe(":80", nil)
+	log.Fatal(http.ListenAndServe(":80", nil))
 }
